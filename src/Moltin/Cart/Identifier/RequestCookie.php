@@ -6,7 +6,7 @@
  */
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
-use Illuminate\Support\Facades\Input;
+use Illuminate\Support\Facades\Request;
 
 class RequestCookie extends Cookie
 {
@@ -24,7 +24,7 @@ class RequestCookie extends Cookie
      */
     public function get()
     {
-        $identifierRequest = Input::get($this->requestID);
+        $identifierRequest = Request::get($this->requestID);
 
         if($identifierRequest)
         {
